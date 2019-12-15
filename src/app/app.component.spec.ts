@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'genesis-generator'`, () => {
+  it(`should have as title 'blockchain-generator'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('genesis-generator');
+    expect(app.title).toEqual('blockchain-generator');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('genesis-generator app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('blockchain-generator app is running!');
   });
 });
