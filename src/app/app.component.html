@@ -14,45 +14,8 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Blockchain Generator</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Roadmap</a>
-            <a class="nav-item nav-link disabled" href="#">Contribute !</a>
-          </div>
-        </div>
-      </nav>
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Ethereum</h5>
-            <p class="card-text">Create an Ethereum blockchain. Supports PoW and PoA.</p>
-            <a href="#" class="btn btn-primary">Get Started</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Hyperledger Fabric</h5>
-            <p class="card-text">Create a Hyperledger Fabric blockchain. Coming soon !<p>
-            <a href="#" class="btn btn-primary disabled">Get started</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <app-head></app-head>
+<router-outlet></router-outlet>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

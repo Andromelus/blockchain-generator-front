@@ -1,15 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EthComponent } from './eth/eth.component';
+import { HomeComponent } from './home/home.component';
+import { HeadComponent } from './head/head.component';
+import { HlfComponent } from './hlf/hlf.component';
+
+const appRoutes: Routes = [
+  { path: 'eth', component: EthComponent },
+  { path: 'hlf', component: HlfComponent },
+  { path: '', component: HomeComponent }
+
+];
 
 @NgModule({
   declarations: [
-    AppComponent],
+    AppComponent,
+    EthComponent,
+    HomeComponent,
+    HeadComponent,
+    HlfComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(
+      appRoutes
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
