@@ -1,100 +1,293 @@
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Blockchain Identifier</span>
-    </div>
-    <input type="number" class="form-control" placeholder="0000" aria-label="Chain ID" aria-describedby="basic-addon1">
-</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="eth-genesis-carousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                <div class="carousel-inner text-center">
+                    <!-- chainid -->
+                    <div class="carousel-item active">
+                        <div class="row d-flex justify-content-center">
+                            <!-- Add Class & Remove Class -->
+                            <div class="col-md-6">
+                                <!-- Add here Div -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Blockchain Identifier</h5>
+                                        <input id="eth-chain-id" type="number" class="form-control" placeholder="0000"
+                                            aria-label="Chain ID" aria-describedby="basic-addon1">
+                                    </div> <!-- Add div close here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- validation algo -->
+                    <div class="carousel-item">
+                        <div class="row d-flex justify-content-center">
+                            <!-- Add Class & Remove Class -->
+                            <div class="col-md-6">
+                                <!-- Add here Div -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Block Validation Algorithm</h5>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="eth-genesis-ethash">
+                                            <label class="custom-control-label" for="eth-genesis-ethash">Ethash
+                                                (PoW)</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="eth-genesis-clique">
+                                            <label class="custom-control-label" for="eth-genesis-clique">Clique
+                                                (PoA)</label>
+                                        </div>
 
+                                    </div> <!-- Add div close here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- nonce -->
+                    <div class="carousel-item">
+                        <div class="row d-flex justify-content-center">
+                            <!-- Add Class & Remove Class -->
+                            <div class="col-md-6">
+                                <!-- Add here Div -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nonce</h5>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span id="eth-nonce-hex" class="input-group-text">0x0</span>
+                                            </div>
+                                            <input id="eth-nonce" type="number" min="0" class="form-control"
+                                                placeholder="Nonce" aria-label="Nonce" value="0"
+                                                aria-describedby="basic-addon1">
+                                        </div>
+                                    </div> <!-- Add div close here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- timestamp -->
+                    <div class="carousel-item">
+                        <div class="row d-flex justify-content-center">
+                            <!-- Add Class & Remove Class -->
+                            <div class="col-md-6">
+                                <!-- Add here Div -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Timestamp</h5>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span id="eth-timestamp-date" class="input-group-text"></span>
+                                            </div>
+                                            <input id="eth-timestamp" type="number" min="0" class="form-control"
+                                                placeholder="Timestamp" aria-label="Timestamp"
+                                                aria-describedby="basic-addon1">
+                                        </div>
+                                    </div> <!-- Add div close here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- extradata -->
+                    <div class="carousel-item">
+                        <div class="row d-flex justify-content-center">
+                            <!-- Add Class & Remove Class -->
+                            <div class="col-md-6">
+                                <!-- Add here Div -->
+                                <div class="card">
+                                    <div id="eth-extradata-source" class="card-body">
+                                        <h5 class="card-title">Extradata</h5>
+                                        <input id="eth-extradata-0" type="text" class="form-control"
+                                            placeholder="Extradata" aria-label="Extradata"
+                                            aria-describedby="basic-addon1">
+                                        <button id="eth-extradata-add" type="button"
+                                            class="btn btn-outline-secondary">Add</button>
+                                    </div> <!-- Add div close here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- gaslimit -->
+                    <div class="carousel-item">
+                        <div class="row d-flex justify-content-center">
+                            <!-- Add Class & Remove Class -->
+                            <div class="col-md-6">
+                                <!-- Add here Div -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gas Limit</h5>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span id="eth-gas-limit-hex" class="input-group-text">0x0</span>
+                                            </div>
+                                            <input id="eth-gas-limit" type="number" min="0" class="form-control"
+                                                placeholder="Gas Limit" aria-label="Gas Limit" value="0"
+                                                aria-describedby="basic-addon1">
+                                        </div>
+                                    </div> <!-- Add div close here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- difficulty -->
+                    <div class="carousel-item">
+                        <div class="row d-flex justify-content-center">
+                            <!-- Add Class & Remove Class -->
+                            <div class="col-md-6">
+                                <!-- Add here Div -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Difficulty</h5>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span id="eth-difficulty-hex" class="input-group-text">0x0</span>
+                                            </div>
+                                            <input id="eth-difficulty" type="number" min="0" class="form-control"
+                                                placeholder="Difficulty" aria-label="Difficulty" value="0"
+                                                aria-describedby="basic-addon1">
+                                        </div>
+                                    </div> <!-- Add div close here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- mix hash -->
+                    <div class="carousel-item">
+                        <div class="row d-flex justify-content-center">
+                            <!-- Add Class & Remove Class -->
+                            <div class="col-md-6">
+                                <!-- Add here Div -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mix Hash</h5>
+                                        <input id="eth-mixhash" type="text" class="form-control" placeholder="Mix Hash"
+                                            aria-label="Mix Hash" aria-describedby="basic-addon1"
+                                            value="0x0000000000000000000000000000000000000000000000000000000000000000">
+                                    </div> <!-- Add div close here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- coinbase -->
+                    <div class="carousel-item">
+                        <div class="row d-flex justify-content-center">
+                            <!-- Add Class & Remove Class -->
+                            <div class="col-md-6">
+                                <!-- Add here Div -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Coinbase</h5>
+                                        <input id="eth-coinbase" type="number" class="form-control"
+                                            placeholder="Coinbase" aria-label="Coinbase" aria-describedby="basic-addon1"
+                                            value="0x0000000000000000000000000000000000000000">
+                                    </div> <!-- Add div close here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- alloc -->
+                    <div class="carousel-item">
+                        <div class="row d-flex justify-content-center">
+                            <!-- Add Class & Remove Class -->
+                            <div class="col-md-6">
+                                <!-- Add here Div -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Alloc</h5>
+                                        <div id="eth-alloc-0" class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <input id="eth-alloc-0-address" type="text" class="form-control"
+                                                placeholder="Address" aria-label="Address"
+                                                aria-describedby="basic-addon1">
+                                            </div>
+                                            <input id="eth-alloc-0-balance" type="number" min="1" class="form-control"
+                                            placeholder="Value" aria-label="Alloc" value="1"
+                                            aria-describedby="basic-addon1">
+                                            <span id="eth-alloc-0-hex" class="input-group-text">0x0</span>
 
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Block Validation Algorithm</span>
-    </div>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Ethash (PoW)</a>
-            <a class="dropdown-item" href="#">Clique (PoA)</a>
+                                        </div>
+                                        <button id="eth-alloc-add" type="button"
+                                            class="btn btn-outline-secondary">Add</button>
+                                    </div> <!-- Add div close here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- number -->
+                    <div class="carousel-item">
+                        <div class="row d-flex justify-content-center">
+                            <!-- Add Class & Remove Class -->
+                            <div class="col-md-6">
+                                <!-- Add here Div -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Number</h5>
+                                        <input id="eth-number" type="number" class="form-control" placeholder="Number"
+                                            aria-label="Number" aria-describedby="basic-addon1">
+                                    </div> <!-- Add div close here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row d-flex justify-content-center">
+                            <!-- Add Class & Remove Class -->
+                            <div class="col-md-6">
+                                <!-- Add here Div -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gas Used</h5>
+                                        <input id="eth-gas-used" type="number" class="form-control"
+                                            placeholder="Gas Used" aria-label="Gas Used"
+                                            aria-describedby="basic-addon1">
+                                    </div> <!-- Add div close here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row d-flex justify-content-center">
+                            <!-- Add Class & Remove Class -->
+                            <div class="col-md-6">
+                                <!-- Add here Div -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Parent Hash</h5>
+                                        <input id="eth-parent-hash" type="text" class="form-control"
+                                            placeholder="Parent Hash" aria-label="Parent Hash"
+                                            aria-describedby="basic-addon1">
+                                    </div> <!-- Add div close here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+
+
+    <a id="carousel-prev-btn" class="carousel-control-prev" href="#eth-genesis-carousel" role="button"
+        data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a id="carousel-next-btn" class="carousel-control-next" href="#eth-genesis-carousel" role="button"
+        data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
 
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Nonce</span>
-    </div>
-    <input type="number" class="form-control" placeholder="Nonce" aria-label="Nonce" aria-describedby="basic-addon1">
-</div>
 
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Timestamp</span>
-    </div>
-    <input type="number" class="form-control" placeholder="Timestamp" aria-label="Timestamp" aria-describedby="basic-addon1">
-</div>
 
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Extradata</span>
-    </div>
-    <input type="number" class="form-control" placeholder="Extradata" aria-label="Extradata" aria-describedby="basic-addon1">
-</div>
-
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Gas limit</span>
-    </div>
-    <input type="number" class="form-control" placeholder="Gas limit" aria-label="Gas limit" aria-describedby="basic-addon1">
-</div>
-
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Difficulty</span>
-    </div>
-    <input type="number" class="form-control" placeholder="Difficulty" aria-label="Difficulty" aria-describedby="basic-addon1">
-</div>
-
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">MixHash</span>
-    </div>
-    <input type="number" class="form-control" placeholder="MixHash" aria-label="MixHash" aria-describedby="basic-addon1">
-</div>
-
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Coinbase</span>
-    </div>
-    <input type="number" class="form-control" placeholder="Coinbase" aria-label="Coinbase" aria-describedby="basic-addon1">
-</div>
-
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Alloc</span>
-    </div>
-    <input type="number" class="form-control" placeholder="Alloc" aria-label="Alloc" aria-describedby="basic-addon1">
-</div>
-
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Number</span>
-    </div>
-    <input type="number" class="form-control" placeholder="number" aria-label="number" aria-describedby="basic-addon1">
-</div>
-
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Gas used</span>
-    </div>
-    <input type="number" class="form-control" placeholder="Gas used" aria-label="gasUsed" aria-describedby="basic-addon1">
-</div>
-
+<!-- 
 <div class="input-group mb-3">
     <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1">Parent Hash</span>
     </div>
     <input type="number" class="form-control" placeholder="Parent hash" aria-label="Parent Hash" aria-describedby="basic-addon1">
-</div>
+</div> -->

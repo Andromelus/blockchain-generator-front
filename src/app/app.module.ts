@@ -7,6 +7,7 @@ import { EthComponent } from './eth/eth.component';
 import { HomeComponent } from './home/home.component';
 import { HeadComponent } from './head/head.component';
 import { HlfComponent } from './hlf/hlf.component';
+import {FormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'eth', component: EthComponent },
@@ -24,6 +25,7 @@ const appRoutes: Routes = [
     HlfComponent],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     RouterModule.forRoot(
       appRoutes
